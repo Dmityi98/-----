@@ -29,12 +29,9 @@ Bashpip install -r requirements.txt
 Шаг 4: Настройка .env
 Создайте файл .env в корне проекта и добавьте:
 env# API настройки (замените на ваши значения)
-MODEL_NAME=your-model-name  # Например, gpt-3.5-turbo или grok-beta
-API_KEY=your-api-key-here  # Ключ от OpenAI/Grok/xAI
+MODEL_NAME=your-model-name  # 
+API_KEY=your-api-key-here  # 
 
-# Дополнительные настройки (опционально)
-DEBUG=True
-OUTPUT_DIR=output
-Безопасность: Не коммитьте .env в Git (добавьте в .gitignore).
+
 Шаг 5: Запуск
 Bashpython main.py
