@@ -1,0 +1,6 @@
+customtkinter
+dotenv
+mistralai
+python-docx
+openpyxl
+#gigachat
