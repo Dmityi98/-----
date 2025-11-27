@@ -27,7 +27,8 @@ Reportvenv\Scripts\activate
 
 
 Шаг 3: Установка Библиотек
-Bashpip install -r requirements.txt
+Bash:  pip install -r requirements.txt
+
 Примечание: Если возникнут конфликты (например, с lxml и python-docx), обновите: pip install --upgrade python-docx lxml.
 
 
@@ -40,4 +41,4 @@ API_KEY=your-api-key-here  #
 
 
 Шаг 5: Запуск
-Bashpython main.py
+Bash:  python main.py
