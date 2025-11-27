@@ -8,10 +8,13 @@ Python: 3.10 или выше.
 Виртуальное окружение: Рекомендуется (venv или conda).
 Библиотеки: Устанавливаются из requirements.txt (включая python-docx, customtkinter для GUI).
 
+
 🚀 Установка и Запуск
 Шаг 1: Клонирование и Подготовка
 Bashgit clone <your-repo-url>  # Или скачайте архив
 cd Отчет  # Название папки проекта
+
+
 Шаг 2: Создание Виртуального Окружения
 Bash# Создайте venv
 python -m venv Reportvenv
