@@ -10,7 +10,7 @@ load_dotenv()
 
 class GigaChatModel(IModel):
     def __init__(self):
-        self.auth_token = "MWMzMjAwNTYtMzNhNi00ZmMwLTgzMzctYzc0NTUwNDBkNjU5Ojc2MmVjNDRjLWJjMTEtNDFjZS1hYmQ1LTYzYTYwZGRiNjQ1Yg=="
+        self.auth_token = ""
         if not self.auth_token:
             raise ValueError("GIGACHAT_AUTH_TOKEN not found in .env")
 
@@ -134,3 +134,4 @@ class GigaChatModel(IModel):
 
         print(full_report)
         return full_report
+
