@@ -10,10 +10,12 @@ class DocxService(IService):
         path = self.files_directory + file_name
         print(path)
         document = Document(path)
-        text = self.__read_table(document)
-
+        text = ""
+        for paragraph in document.paragraphs:
+            if paragraph.text:
+                text += paragraph.text + "\n"
+        text += self.__read_table(document)
         return text
-    
 
     def __read_table(self, document):
         text = ""
@@ -22,7 +24,4 @@ class DocxService(IService):
                 for cell in row.cells:
                     text += cell.text + " "
                 text += "\n"
-        file = open("Report.txt", "a", encoding="utf-8")
-        file.write(text + "\n")
-        file.close()
         return text

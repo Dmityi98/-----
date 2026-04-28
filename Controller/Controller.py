@@ -18,18 +18,17 @@ class Controller:
     def work(self):
         print(datetime.datetime.now())
         registration_text = ""
-        text_order = ""
         print("Работа контролеера")
         files = os.listdir(self.__folderPath)
 
         for item in files:
             name,ext = os.path.splitext(item)
             if ext == ".docx":
-                registration_text = self.docx_service.read_file(item)
-            if ext == ".xlsx":
-                text_order = self.excel_service.read_file(item)
+                registration_text += self.docx_service.read_file(item)
 
-        answer_from_model = self.model.answer(registration_text, text_order)
+
+        answer_from_model = self.model.answer(registration_text)
+        print(answer_from_model)
         print(datetime.datetime.now())
         file = open("Отчет.txt", "w", encoding="utf-8")
         file.write(answer_from_model)
